@@ -16,7 +16,7 @@ function Review() {
 
     const handleClick = () => {
         axios.post('/api/feedback', dataToSend).then((response) => {
-            history.post('/success')
+            history.push('/success')
         }).catch((error) => {
             console.error(error);
             alert('Something went wrong submitting your feedback!');
