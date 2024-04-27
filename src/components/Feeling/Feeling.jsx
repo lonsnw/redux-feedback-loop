@@ -13,11 +13,11 @@ function Feeling() {
                     id="feeling"
                     label="Feeling"
                     type="number"
-                    value={feeling}
-                    data-testid="input"
-                    onChange={(e) => {
-                        setFeeling(e.target.value);
-                    }}
+                    // value={feeling}
+                    // data-testid="input"
+                    // onChange={(e) => {
+                    //     setFeeling(e.target.value);
+                    // }}
                     />
                     <br />
                     <Button 
