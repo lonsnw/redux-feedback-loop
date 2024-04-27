@@ -5,12 +5,19 @@ import { Typography, Stack, Card, TextField, Button } from '@mui/material';
 import NavigateNextOutlinedIcon from '@mui/icons-material/NavigateNextOutlined';
 
 function Feeling() {
-    const [feeling, setFeeling] = useState('');
+    const [feedback, setFeedback] = useState({ feeling: 0, understanding: 0, support: 0, comments: '' });
     const dispatch = useDispatch();
     const history = useHistory();
 
+    const handleFeelings = (e) => {
+        setFeedback({
+            ...feedback,
+            feeling: e.target.value,
+        });
+    }
+
     const addFeeling = () => {
-        dispatch({ type: 'ADD_FEEDBACK', payload: feeling });
+        dispatch({ type: 'ADD_FEEDBACK', payload: feedback });
         history.push('/understanding')
     }
 
@@ -25,9 +32,7 @@ function Feeling() {
                     label="Feeling"
                     type="number"
                     data-testid="input"
-                    onChange={(e) => {
-                        setFeeling(e.target.value);
-                    }}
+                    onChange={handleFeelings}
                     />
                     <br />
                     <Button 
