@@ -30,12 +30,18 @@ function App() {
       <ThemeProvider theme={theme}>
         <Header />
         <Router>
-            <Route exact path="/" element={<Feeling />}/>
-            <Route path="/understanding" element={<Understanding />}/>
-            <Route path="/support" element={<Support />}/>
-            <Route path="/comments" element={<Comments />}/>
-            <Route path="/review" element={<Review />}/>
-            <Route path="/success" element={<Success />}/>
+            <Route exact path="/">
+              <Feeling /> </Route>
+            <Route path="/understanding">
+              <Understanding /> </Route>
+            <Route path="/support">
+              <Support /> </Route>
+            <Route path="/comments">
+              <Comments /> </Route>
+            <Route path="/review">
+              <Review /> </Route>
+            <Route path="/success">
+              <Success /> </Route>
         </Router>
       </ThemeProvider>
     </div>
