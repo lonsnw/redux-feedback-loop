@@ -1,7 +1,19 @@
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { Typography, Stack, Card, TextField, Button } from '@mui/material';
 import NavigateNextOutlinedIcon from '@mui/icons-material/NavigateNextOutlined';
 
 function Feeling() {
+    const store = useSelector(store => store.feedback)
+    const [feeling, setFeeling] = useState('');
+    const dispatch = useDispatch();
+    const history = useHistory();
+
+    const addFeeling = () => {
+        dispatch({ type: 'ADD_FEEDBACK', payload: feeling });
+        history.push('/understanding')
+    }
 
     return(
         <div>
@@ -13,18 +25,19 @@ function Feeling() {
                     id="feeling"
                     label="Feeling"
                     type="number"
-                    // value={feeling}
-                    // data-testid="input"
-                    // onChange={(e) => {
-                    //     setFeeling(e.target.value);
-                    // }}
+                    data-testid="input"
+                    onChange={(e) => {
+                        setFeeling(e.target.value);
+                    }}
                     />
                     <br />
                     <Button 
                     startIcon={<NavigateNextOutlinedIcon />} 
                     variant="contained" 
                     color='primary' 
-                    data-testid="next">Next</Button>
+                    data-testid="next"
+                    onClick={addFeeling}>
+                        Next</Button>
                 </Stack>
             </Card>
         </div>
