@@ -29,6 +29,6 @@
         - [x] Write client-side POST
         - [x] Write server-side POST
     - [x] Submission will navigate to Success component
-- [ ] Create Success component showing that user has successfully submitted feedback
-    - [ ] Add button to clear and restart survey
-        - [ ] Button must include `data-testid="next"`
+- [x] Create Success component showing that user has successfully submitted feedback
+    - [x] Add button to clear and restart survey
+        - [x] Button must include `data-testid="next"`
