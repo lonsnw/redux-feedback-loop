@@ -1,27 +1,28 @@
 ## Checklist
 
 - [x] Build server GET route
-- [ ] Create store and create reducer `feedback`
-- [ ] Create Feeling component with input for how the user is feeling -- this will be the `/` route
-    - [ ] Input should save to `feedback`
-        - [ ] Input must include `data-testid="input"`
-    - [ ] Add button to navigate to Understanding component
-        - [ ] Button must include `data-testid="next"`
-- [ ] Create Understanding component with input for how well the user is understanding content
-    - [ ] Input should save to `feedback`
-        - [ ] Input must include `data-testid="input"`
-    - [ ] Add button to navigate to Support component
-        - [ ] Button must include `data-testid="next"`
-- [ ] Create Support component with input for how well the user is being supported
-    - [ ] Input should save to `feedback`
-        - [ ] Input must include `data-testid="input"`
-    - [ ] Add button to navigate to Comments component
-        - [ ] Button must include `data-testid="next"`
-- [ ] Create Comments component with input for user comments
-    - [ ] Input should save to `feedback`
-        - [ ] Input must include `data-testid="input"`
-    - [ ] Add button to navigate to Review component
-        - [ ] Button must include `data-testid="next"`
+- [x] Create store and create reducer `feedback`
+- [x] Create Feeling component with input for how the user is feeling -- this will be the `/` route
+    - [x] Input should save to `feedback`
+        - [x] Input must include `data-testid="input"`
+    - [x] Add button to navigate to Understanding component
+        - [x] Button must include `data-testid="next"`
+- [x] Create Understanding component with input for how well the user is understanding content
+    - [x] Input should save to `feedback`
+        - [x] Input must include `data-testid="input"`
+    - [x] Add button to navigate to Support component
+        - [x] Button must include `data-testid="next"`
+- [x] Create Support component with input for how well the user is being supported
+    - [x] Input should save to `feedback`
+        - [x] Input must include `data-testid="input"`
+    - [x] Add button to navigate to Comments component
+        - [x] Button must include `data-testid="next"`
+- [x] Create Comments component with input for user comments
+    - [x] Input should save to `feedback`
+        - [x] Input must include `data-testid="input"`
+    - [x] Add button to navigate to Review component
+        - [x] Button must include `data-testid="next"`
+- [x] Create database using `database.sql`
 - [ ] Create Review component showing all data from `feedback`
     - [ ] Add button to submit content to the database
         - [ ] Button must include `data-testid="next"`
