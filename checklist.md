@@ -23,13 +23,12 @@
     - [x] Add button to navigate to Review component
         - [x] Button must include `data-testid="next"`
 - [x] Create database using `database.sql`
-- [ ] Create Review component showing all data from `feedback`
-    - [ ] Add button to submit content to the database
-        - [ ] Button must include `data-testid="next"`
-        - [ ] Write client-side POST
-        - [ ] Write server-side POST
-    - [ ] Submission will navigate to Success component
+- [x] Create Review component showing all data from `feedback`
+    - [x] Add button to submit content to the database
+        - [x] Button must include `data-testid="next"`
+        - [x] Write client-side POST
+        - [x] Write server-side POST
+    - [x] Submission will navigate to Success component
 - [ ] Create Success component showing that user has successfully submitted feedback
     - [ ] Add button to clear and restart survey
         - [ ] Button must include `data-testid="next"`
-- [ ] Build server POST route

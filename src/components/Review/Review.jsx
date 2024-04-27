@@ -35,7 +35,7 @@ function Review() {
                         <Typography>Your comments: {feedback[3]}</Typography>
                     </CardContent>
                     <CardActions>
-                        <Button startIcon={<ChecklistIcon />} variant="contained" onClick={() => {handleClick()}}>Submit</Button>
+                        <Button data-testid="next" startIcon={<ChecklistIcon />} variant="contained" onClick={() => {handleClick()}}>Submit</Button>
                     </CardActions>
                 </Stack>
             </Card>
