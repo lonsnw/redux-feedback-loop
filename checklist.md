@@ -26,6 +26,8 @@
 - [ ] Create Review component showing all data from `feedback`
     - [ ] Add button to submit content to the database
         - [ ] Button must include `data-testid="next"`
+        - [ ] Write client-side POST
+        - [ ] Write server-side POST
     - [ ] Submission will navigate to Success component
 - [ ] Create Success component showing that user has successfully submitted feedback
     - [ ] Add button to clear and restart survey
