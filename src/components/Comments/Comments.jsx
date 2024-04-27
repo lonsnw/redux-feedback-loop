@@ -1,8 +1,19 @@
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { Typography, Stack, Card, TextField, Button } from '@mui/material';
 import NavigateNextOutlinedIcon from '@mui/icons-material/NavigateNextOutlined';
 
 function Comments() {
+    const [comments, setComments] = useState('');
+    const dispatch = useDispatch();
+    const history = useHistory();
 
+    const addComments = () => {
+        dispatch({ type: 'ADD_FEEDBACK', payload: comments });
+        history.push('/review')
+    }
+    
     return(
         <div>
             <Card>
@@ -14,13 +25,17 @@ function Comments() {
                     id="comments"
                     label="Comments"
                     data-testid="input"
+                    onChange={(e) => {
+                        setComments(e.target.value);
+                    }}
                     />
                     <br />
                     <Button 
                     startIcon={<NavigateNextOutlinedIcon />} 
                     variant="contained" 
                     color='primary' 
-                    data-testid="next">
+                    data-testid="next"
+                    onClick={addComments}>
                         Next</Button>
                 </Stack>
            </Card>
