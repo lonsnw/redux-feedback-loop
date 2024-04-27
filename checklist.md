@@ -1,27 +1,28 @@
 ## Checklist
 
 - [x] Build server GET route
+- [ ] Create store and create reducer `feedback`
 - [ ] Create Feeling component with input for how the user is feeling -- this will be the `/` route
-    - [ ] Input should save to redux
+    - [ ] Input should save to `feedback`
         - [ ] Input must include `data-testid="input"`
     - [ ] Add button to navigate to Understanding component
         - [ ] Button must include `data-testid="next"`
 - [ ] Create Understanding component with input for how well the user is understanding content
-    - [ ] Input should save to redux
+    - [ ] Input should save to `feedback`
         - [ ] Input must include `data-testid="input"`
     - [ ] Add button to navigate to Support component
         - [ ] Button must include `data-testid="next"`
 - [ ] Create Support component with input for how well the user is being supported
-    - [ ] Input should save to redux
+    - [ ] Input should save to `feedback`
         - [ ] Input must include `data-testid="input"`
     - [ ] Add button to navigate to Comments component
         - [ ] Button must include `data-testid="next"`
 - [ ] Create Comments component with input for user comments
-    - [ ] Input should save to redux
+    - [ ] Input should save to `feedback`
         - [ ] Input must include `data-testid="input"`
     - [ ] Add button to navigate to Review component
         - [ ] Button must include `data-testid="next"`
-- [ ] Create Review component showing all data from Redux/previous components
+- [ ] Create Review component showing all data from `feedback`
     - [ ] Add button to submit content to the database
         - [ ] Button must include `data-testid="next"`
     - [ ] Submission will navigate to Success component

@@ -13,9 +13,15 @@ function Support() {
                     id="support"
                     label="Support"
                     type="number"
+                    data-testid="input"
                     />
                     <br />
-                    <Button startIcon={<NavigateNextOutlinedIcon />} variant="contained" color='primary'>Next</Button>
+                    <Button 
+                    startIcon={<NavigateNextOutlinedIcon />} 
+                    variant="contained" 
+                    color='primary' 
+                    data-testid="next">
+                        Next</Button>
                 </Stack>
            </Card>
         </div>
