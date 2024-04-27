@@ -1,11 +1,10 @@
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Typography, Stack, Card, TextField, Button } from '@mui/material';
 import NavigateNextOutlinedIcon from '@mui/icons-material/NavigateNextOutlined';
 
 function Feeling() {
-    const store = useSelector(store => store.feedback)
     const [feeling, setFeeling] = useState('');
     const dispatch = useDispatch();
     const history = useHistory();

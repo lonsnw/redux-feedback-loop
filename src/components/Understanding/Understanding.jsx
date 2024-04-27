@@ -1,7 +1,18 @@
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { Typography, Stack, Card, TextField, Button } from '@mui/material';
 import NavigateNextOutlinedIcon from '@mui/icons-material/NavigateNextOutlined';
 
 function Understanding() {
+    const [understanding, setUnderstanding] = useState('');
+    const dispatch = useDispatch();
+    const history = useHistory();
+
+    const addUnderstanding = () => {
+        dispatch({ type: 'ADD_FEEDBACK', payload: understanding });
+        history.push('/support')
+    }
 
     return(
         <div>
@@ -14,13 +25,17 @@ function Understanding() {
                     label="Understanding"
                     type="number"
                     data-testid="input"
+                    onChange={(e) => {
+                        setUnderstanding(e.target.value);
+                    }}
                     />
                     <br />
                     <Button 
                     startIcon={<NavigateNextOutlinedIcon />} 
                     variant="contained" 
                     color='primary' 
-                    data-testid="next">
+                    data-testid="next"
+                    onClick={addUnderstanding}>
                         Next</Button>
                 </Stack>
            </Card>
