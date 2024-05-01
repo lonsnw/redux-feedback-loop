@@ -29,6 +29,7 @@ function Review() {
             <Card>
                 <Stack direction="column" justifyContent="space-between" alignItems="center" color='primary.dark'>
                     <CardContent>
+                        <Typography variant="h5">Review your feedback:</Typography>
                         <Typography>How you're feeling: {feedback[0]}</Typography>
                         <Typography>How much you're understanding: {feedback[1]}</Typography>
                         <Typography>How supported you feel: {feedback[2]}</Typography>
